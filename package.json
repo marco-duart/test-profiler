@@ -1,0 +1,31 @@
+{
+  "name": "pagina-profiler",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Recriação local não oficial do teste Profiler, uso pessoal. Nada é salvo nem enviado.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verificar": "node ferramentas/verificar.mjs",
+    "acuracia": "node ferramentas/acuracia.mjs",
+    "paginas": "node ferramentas/conferir_paginas.mjs",
+    "e2e": "node ferramentas/e2e.mjs todos",
+    "graficos": "node ferramentas/comparar_graficos.mjs",
+    "formulario": "node ferramentas/comparar_formulario.mjs",
+    "dados": "python3 -B ferramentas/gerar_dados.py && python3 -B ferramentas/extrair_textos.py && python3 -B ferramentas/extrair_molde.py",
+    "golden": "../../.venv/bin/python -B ferramentas/gerar_golden.py",
+    "fundos": "../../.venv/bin/python -B ferramentas/gerar_fundos.py"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "playwright-core": "^1.65.1",
+    "vite": "^8.3.8",
+    "vite-plugin-singlefile": "^2.3.4"
+  }
+}

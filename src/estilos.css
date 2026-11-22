@@ -1,0 +1,8 @@
+/* Só animações do formulário (equivalem ao slideUp/fadeIn/fadeTo "slow" do jQuery original). Tudo com prefixo pf-. */
+@keyframes pf-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pf-slide-up { from { grid-template-rows: 1fr; opacity: 1; } to { grid-template-rows: 0fr; opacity: 0; } }
+@keyframes pf-alerta { 0%, 71.4% { opacity: 1; } 100% { opacity: 0; } }
+.pf-entrando { animation: pf-fade-in 600ms ease; }
+.pf-saindo { display: grid; animation: pf-slide-up 600ms ease forwards; }
+.pf-saindo > .pf-miolo { overflow: hidden; min-height: 0; }
+.pf-alerta { animation: pf-alerta 7s linear forwards; }
